@@ -1,0 +1,60 @@
+.image-loader {
+    width: 500px;
+    height: 500px;
+    background-color: aliceblue;
+    position: relative;
+}
+.image-preview
+{
+    width:217px;
+    height:189px;
+    background-color: aliceblue;
+    position: absolute;
+    top:105px;
+    right:25px;
+}
+.image-preview img
+{
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    position: relative;
+}
+
+
+.image-loader .image {
+    width: 90%;
+    height: 100%;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.rtl-nav {
+    width: 40%;
+    height: 40px;
+    margin-left: 45%;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.navigation {
+    width: 747px;
+    height: 40px;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-nav {
+    width: 747px;
+    height: 40px;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    margin-top: 1%;
+    gap:10px;
+}
+

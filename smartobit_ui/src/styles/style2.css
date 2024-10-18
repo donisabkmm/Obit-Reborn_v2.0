@@ -1,0 +1,648 @@
+/* CSS for  Recent Stories */
+
+
+.personal-details {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.personal-details th,
+.personal-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style the header row */
+.personal-details th {
+    background-color: #f2f2f2;
+}
+
+/* Style the image in a circle */
+.image {
+    width: 217px;
+    height: 189px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card styles */
+.card {
+    background: rgba(0, 0, 0, 0.2);
+    /* Darker background color */
+    transform: translate(0, 0);
+    /* Initial state: no translation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transitions for effects */
+}
+
+.card:hover {
+    border: 1px solid blue;
+    /* Change the border color to blue when hovering */
+    transform: translate(0, -10px);
+    /* Moving effect when hovering */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow when hovering */
+}
+
+/* Add a blue border when the card is clicked */
+.clicked-card {
+    border: 2px solid blue !important;
+    /* Use !important to ensure it overrides other styles */
+    transform: translate(0, -10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.image {
+    width: 217px;
+    height: 189px;
+}
+
+.image img {
+
+    object-fit: cover;
+}
+
+.grid-container {
+    display: grid;
+    /* Fixed width with auto-fill */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    /* Row gap */
+    grid-gap: 1em;
+    grid-column-gap: 2em;
+    padding: 20px;
+}
+
+.grid-item {
+    width: 18em;
+    height: 8em;
+    background-color: #ddd;
+    /* text-align: center;
+    border: 1px solid #999; */
+}
+
+.customCard {
+    min-width: 10em;
+    /* Set the minimum width here */
+    /* Add any other styling you require for the cards */
+}
+
+.input-box {
+    width: 90%;
+    border-bottom: 2px solid rgb(173, 205, 224);
+    padding: 0.2em;
+    padding-left: 0.5em;
+    display: inline-block;
+    border-top-right-radius: 0.4em;
+    border-top-left-radius: 0.4em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    background-color: white;
+    cursor: text;
+}
+
+.unit-box {
+    font-size: 1em;
+    border: 1px solid rgb(188, 229, 255);
+    border-radius: 0.5em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    display: inline-block;
+    background-color: #e6f4ff;
+    color: #627ca0;
+    display: 'flex';
+    align-items: 'center';
+    margin: 0.2em;
+}
+
+.close {
+    color: rgb(32, 87, 124);
+    cursor: pointer;
+    scale: 0.8;
+}
+
+.plus {
+    color: #629ce2;
+    margin-right: 0.7em;
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.plus:hover {
+    color: #1964bf;
+}
+
+
+.dropdown {
+    width: 30%;
+    height: auto;
+    background-color: #fafafa;
+    border: 1px solid rgb(215, 230, 248);
+    border-radius: 0.5em;
+    margin-top: 0.5em;
+
+    z-index: 9999;
+    position: fixed;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+    gap: 0.5em;
+    padding: 1em;
+
+    box-shadow: 0px 0px 0px 0px rgb(145, 170, 182), 8px 8px 16px 0px rgb(145, 170, 182);
+
+}
+
+.unit-item {
+    background-color: #f1f1f1;
+    border: 1px solid #c5c5c5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    padding: 0.5em;
+}
+
+.filter-units {
+    width: 50%;
+    /* margin-right: auto; */
+}
+
+.filter-bureau {
+    width: 50%;
+    /* margin-left: auto; */
+}
+
+.float-card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.float-card {
+    width: 16rem;
+    background-color: rgb(250, 253, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(98, 140, 196, 0.63);
+    overflow: visible;
+    padding-top: 30px;
+}
+
+.float-card img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: -1.5rem;
+    left:50%;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.float-card-content {
+    padding: 1rem;
+    padding-top: 3rem;
+    text-align: center;
+    /* Center the content for better appearance */
+}
+
+.float-card-content h2 {
+    margin-top: 30px;
+    /* Add space to account for the image overlap */
+}
+
+/* this changes the font color of content inside card */
+.float-card-content p {
+    margin: 0;
+    color: #000000;
+}
+
+.typo {
+    width: 100%;
+    margin-top: 0.2rem !important;
+}
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+/* styling of whole input container */
+.form {
+    float: right;
+    --timing: 0.3s;
+    --width-of-input: 30%;
+    /*width of whole search box */
+    --height-of-input: 2.5em;
+    --border-height: 2px;
+    --input-bg: #dfe7f5;
+    --border-color: #2f2ee9;
+    --border-radius: 0.6em;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+    margin-bottom: 1em;
+    margin-right: 2em;
+}
+
+/* styling of Input */
+.input {
+    font-family: PanchariUni;
+    font-size: 18px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    /*padding-inline: 0.5em;*/
+    /*padding-block: 0.7em;*/
+    border: none;
+}
+
+/* styling of animated border */
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+
+/* sizing svg icons */
+.form svg {
+    width: 1.0625em;
+    margin-top: 0.1875em;
+}
+
+
+option {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 12em;
+    width: 10em;
+    height: 6em;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.select-class {
+    /* select box color */
+    background-color: transparent;
+    /*background-color: #dfe7f5;*/
+    width: 8em;
+    border-radius: 12em;
+    color: black;
+    padding: 0.5em 1em;
+    border: 0.1em solid transparent;
+    /*border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;*/
+    cursor: pointer;
+}
+
+.separator-container {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    transition: all 0.5s ease;
+}
+
+.separator-container::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    margin-left: 0.5em;
+}
+
+.unit-text {
+    margin-right: 0.5em;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.arrow {
+    scale: 70%;
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    transition: transform 0.3s ease;
+    transform: rotate(90deg);
+}
+
+.rotated {
+    transform: rotate(0deg);
+}
+
+
+.wrappe {
+    transition: all 0.1s ease;
+    /* Transition properties */
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-10%);
+}
+
+.unhide {
+
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0%);
+}
+
+/*whole wrap*/
+.wrappe {
+    width: 99%;
+    display: grid;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    /*grid-template-columns: repeat(10, 1fr);*/
+    gap: 1em;
+    grid-column-gap: 0.1em;
+    /* grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));  this causes the cards to be spread, for  eg when there is only two cirds */
+    grid-template-columns: repeat(auto-fit, 18em);
+    /* grid-template-rows: 10em; */
+}
+
+.card-view {
+    padding: 0.5em;
+    width: 16em;
+    height: 7.6em;
+    background-color: whitesmoke;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+}
+
+.typo {
+    width: 11.5em;
+}
+
+
+
+/* Style for Archived Stories */
+
+/* table .MuiTableCell-root {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+
+} */
+
+tr:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Exclude th elements from the hover effect */
+tr:hover th {
+    background-color: white;
+    /* Or specify the default background color for th elements */
+}
+
+.archived-cell {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+
+.archived-cell-head {
+    padding-top: 0.7em !important;
+    padding-bottom: 0.7em !important;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+}
+
+/* styling of whole input container */
+.form {
+    float: right;
+    --timing: 0.3s;
+    --width-of-input: 30%;
+    /*width of whole search box */
+    --height-of-input: 2.5em;
+    --border-height: 2px;
+    --input-bg: #dfe7f5;
+    --border-color: #2f2ee9;
+    --border-radius: 0.6em;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg, #fff);
+    margin-bottom: 1em;
+    margin-right: 2em;
+}
+
+/* styling of Input */
+.input {
+    font-family: PanchariUni;
+    font-size: 18px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    /*padding-inline: 0.5em;*/
+    /*padding-block: 0.7em;*/
+    border: none;
+}
+
+/* styling of animated border */
+.form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+    border-radius: var(--after-border-radius);
+}
+
+input:focus {
+    outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+    transform: scale(1);
+}
+
+
+/* sizing svg icons */
+.form svg {
+    width: 1.0625em;
+    margin-top: 0.1875em;
+}
+
+
+option {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 12em;
+    width: 10em;
+    height: 6em;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.select-class {
+    /* select box color */
+    background-color: transparent;
+    /*background-color: #dfe7f5;*/
+    width: 8em;
+    border-radius: 12em;
+    color: black;
+    padding: 0.5em 1em;
+    border: 0.1em solid transparent;
+    /*border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;*/
+    cursor: pointer;
+}
+
+.separator-container {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    transition: all 0.5s ease;
+}
+
+.separator-container::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgb(192, 192, 192);
+    margin-left: 0.5em;
+}
+
+.unit-text {
+    margin-right: 0.5em;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.arrow {
+    scale: 70%;
+    cursor: pointer;
+    color: rgb(32, 32, 32);
+    transition: transform 0.3s ease;
+    transform: rotate(90deg);
+}
+
+.rotated {
+    transform: rotate(0deg);
+}
+
+
+.wrappe {
+    transition: all 0.1s ease;
+    /* Transition properties */
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-10%);
+}
+
+.unhide {
+
+    opacity: 1;
+    height: 100%;
+    transform: translateY(0%);
+}
+
+/*whole wrap*/
+.wrappe {
+    width: 99%;
+    display: grid;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    /*grid-template-columns: repeat(10, 1fr);*/
+    gap: 1em;
+    grid-column-gap: 0.1em;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    /* grid-template-rows: 10em; */
+}
+
+.card-view {
+    padding: 0.5em;
+    width: 16em;
+    height: 7.6em;
+    background-color: whitesmoke;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+}
+
+.typo {
+    width: 11.5em;
+}
